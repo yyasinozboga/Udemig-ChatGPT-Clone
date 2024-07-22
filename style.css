@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Colors */
+:root {
+  --bg-color: #2e2f3a;
+  --text-color: #ffffff;
+  --outgoing-chat-bg: #343541;
+  --incoming-chat-bg: #444654;
+  --icon-color: #acacbe;
+}
+
+.light-mode {
+  --text-color: #343541;
+  --icon-color: #a9a9bc;
+  --outgoing-chat-bg: #ffffff;
+  --incoming-chat-bg: #f7f7f8;
+}
+
+/* Utils */
+body {
+  background-color: var(--outgoing-chat-bg);
+}
+
+button,
+textarea {
+  outline: none;
+  border: none;
+  background-color: var(--textarea-btn-bg-color);
+  color: var(--text-color);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Chat List */
+.chat-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat */
+.chat {
+  padding: 20px 5px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--text-color);
+}
+
+.chat.outgoing {
+  background-color: var(--incoming-chat-bg);
+}
+
+.chat.incoming {
+  background-color: var(--outgoing-chat-bg);
+}
+
+.chat-img {
+  width: 30px;
+  height: 30px;
+}
+
+.loading-animation {
+  display: flex;
+  gap: 5px;
+}
+
+.loading {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--text-color);
+  opacity: 0.7;
+  animation: loading 1.5s var(--delay) ease-in-out infinite;
+}
+
+@keyframes loading {
+  0%,
+  44% {
+    transform: translateY(0);
+  }
+
+  22% {
+    opacity: 0.4;
+    transform: translateY(-7px);
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: var(--outgoing-chat-bg);
+  border-top: 1px solid var(--incoming-chat-bg);
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 5px;
+}
+
+.footer span {
+  font-size: 20px;
+  color: var(--icon-color);
+}
+
+.typing {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+
+.textarea {
+  padding: 12px;
+  width: 100%;
+  height: 50px;
+  resize: none;
+  font-size: 15px;
+  background-color: var(--incoming-chat-bg);
+}
+
+.footer button {
+  padding: 12px;
+  background-color: var(--incoming-chat-bg);
+  cursor: pointer;
+}
+
+.default-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-color);
+  font-weight: 700;
+}
