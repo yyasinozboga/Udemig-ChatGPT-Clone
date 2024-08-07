@@ -1,4 +1,10 @@
-# Chatgpt Clone
+# Udemig ChatGPT Clone
+
+This project was created by Yasin Özboğa.
+In this project, the data was gotten from API.
+This project includes the dark and light mode feature.
+This project was created with used HTML5, CSS3 and JavaScript.
+This project was designed to be compatible with users.
 
 ## Used Techs
 
